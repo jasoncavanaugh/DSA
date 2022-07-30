@@ -49,7 +49,7 @@ class MinHeap:
         if min_idx != idx:
             # swap
             self._swap(min_idx, idx)
-            _sink(min_idx)
+            self._sink(min_idx)
 
 
     def _swim(self, idx: int):
@@ -69,7 +69,7 @@ class MinHeap:
             raise ValueError(f"Invalid index {a}")
 
         if not _is_valid_idx(b): 
-            raise ValueError(f"Invalid index{b}")
+            raise ValueError(f"Invalid index {b}")
 
         # swap
         temp = self.arr[a]
