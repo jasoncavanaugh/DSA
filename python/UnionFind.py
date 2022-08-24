@@ -4,7 +4,9 @@ class UnionFind:
         self.sizes = [1 for i in range(size)]
 
     def union(self, v: int, u: int):
-        if find(v) == find(u): 
+        v = find(v)
+        u = find(u)
+        if v == u:
             return
 
         if self.sizes[v] > self.size[u]:
